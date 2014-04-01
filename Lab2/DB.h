@@ -3,6 +3,10 @@
 
 class DB{
 public:
+	DB(){
+		Init();	
+	}
+	~DB();
 	void Init();
 	void AddToList(const char* mFirstName, const char*mLastName, int Kvar);
 	void DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar);

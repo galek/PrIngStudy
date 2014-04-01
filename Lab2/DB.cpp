@@ -5,6 +5,7 @@
 
 void DB::Init() {
 	list.Clear();
+	newList.Clear();
 }
 
 void DB::AddToList(const char* mFirstName, const char*mLastName, int Kvar){
@@ -17,7 +18,7 @@ void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 	Adress*DA = GetFromList(mFirstName, mLastName);
 
 	int size = list.GetSize();
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size - 1; i++)
 	{
 		Adress *a = &list.entries[i];
 		if (a->mFirstName != DA->mFirstName)
@@ -32,31 +33,39 @@ void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 		Adress*a = &list.entries[i];
 		delete a;
 		a = NULL;
-	}*/
+		}*/
 	list = newList;
 
-	
+
 }
 
 
 Adress* DB::GetFromList(const char* mFirstName, const char*mLastName){
 
-	for (int i = 0; list.GetSize(); i++)
+	for (int i = 0; i < list.GetSize(); i++)
 	{
 		Adress *a = &list.entries[i];
-		if (a->mFirstName == mFirstName){
+		if (a->mFirstName == mFirstName) 
+		{
 			printf("{GetFromList} Found %s \n", a->mFirstName.c_str());
 			return a;
 		}
 	}
+	printf("Not Found %s \n", mFirstName);
 	return NULL;
 }
 
 void DB::WriteContains()
 {
-	for (int i = 0; i <list.GetSize(); i++)
+	for (int i = 0; i < list.GetSize(); i++)
 	{
 		Adress *a = &list.entries[i];
 		printf("{Contain} Found %s \n", a->mFirstName.c_str());
 	}
+}
+
+DB::~DB()
+{
+	list.Erase();
+	newList.Erase();
 }
