@@ -18,16 +18,14 @@ int main(){
 
 	db.GetFromList("Nick", "Galko");
 
-	//system("pause");
 	printf("DeleteFromList\n");
 	db.DeleteFromList("Tatyna", "Galko", 75);
-	//system("pause");
-	
+	db.WriteContains();
 	printf("Test old list \n");
-	//system("pause");
-	/*db.GetFromList("Nick", "Galko");
-	printf("Test new list \n");*/
-	//db.GetFromList("Tatyna", "Galko");
+	db.GetFromList("Nick", "Galko");
+	printf("Test new list \n");
+	system("pause");
+	db.GetFromList("Tatyna", "Galko");
 
 	system("pause");
 	return 0;

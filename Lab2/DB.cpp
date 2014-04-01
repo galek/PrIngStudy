@@ -13,7 +13,6 @@ void DB::AddToList(const char* mFirstName, const char*mLastName, int Kvar){
 }
 void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 	printf("DeleteFromList %s %s %i \n", mFirstName, mLastName, Kvar);
-	Vega::VList<Adress> newList;
 	newList.Clear();
 	Adress*DA = GetFromList(mFirstName, mLastName);
 
@@ -29,16 +28,14 @@ void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 	list.Erase();
 
 
-	for (int i = 0; i <list.GetSize(); i++){
-		delete &list.entries[i];
-	}
+	/*for (int i = 0; i <list.GetSize(); i++){
+		Adress*a = &list.entries[i];
+		delete a;
+		a = NULL;
+	}*/
 	list = newList;
 
-	for (int i = 0; i <newList.GetSize(); i++)
-	{
-		Adress *a = &newList.entries[i];
-		printf("{Contain} Found %s \n", a->mFirstName.c_str());
-	}
+	
 }
 
 
@@ -53,4 +50,13 @@ Adress* DB::GetFromList(const char* mFirstName, const char*mLastName){
 		}
 	}
 	return NULL;
+}
+
+void DB::WriteContains()
+{
+	for (int i = 0; i <list.GetSize(); i++)
+	{
+		Adress *a = &list.entries[i];
+		printf("{Contain} Found %s \n", a->mFirstName.c_str());
+	}
 }
