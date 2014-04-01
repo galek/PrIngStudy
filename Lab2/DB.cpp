@@ -17,28 +17,16 @@ void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 	if (newList)
 		newList->Clear();
 	newList = new Vega::VList<Adress>();
-	Adress*DA = GetFromList(mFirstName, mLastName);
 
 	int size = list.GetSize();
 	for (int i = 0; i < size - 1; i++)
 	{
 		Adress *a = &list.entries[i];
-		if (a->mFirstName != DA->mFirstName)
+		if ((a->mFirstName != mFirstName) || (a->mLastName != mLastName))
 			newList->AddElement(a);
 	}
-	/*list.Clear();
-	list.Resize(size-1);*/
 	list.Erase();
-
-
-	/*for (int i = 0; i <list.GetSize(); i++){
-		Adress*a = &list.entries[i];
-		delete a;
-		a = NULL;
-		}*/
 	list = *newList;
-
-
 }
 
 
@@ -47,7 +35,7 @@ Adress* DB::GetFromList(const char* mFirstName, const char*mLastName){
 	for (int i = 0; i < list.GetSize(); i++)
 	{
 		Adress *a = &list.entries[i];
-		if (a->mFirstName == mFirstName) 
+		if ((a->mFirstName == mFirstName) && (a->mLastName == mLastName))
 		{
 			printf("{GetFromList} Found %s \n", a->mFirstName.c_str());
 			return a;
