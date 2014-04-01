@@ -1,0 +1,8 @@
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\bin\Debug\AbstractClass.exe.config
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\obj\Debug\AbstractClass.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\bin\Debug\AbstractClass.exe
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\bin\Debug\AbstractClass.pdb
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\obj\Debug\AbstractClass.exe
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\obj\Debug\AbstractClass.pdb
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\bin\Debug\Analog.dll
+C:\Users\Nick\Desktop\4Семестр\ПИ\C#Test\AbstractClass\AbstractClass\bin\Debug\Analog.pdb

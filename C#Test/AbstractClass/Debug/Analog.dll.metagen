@@ -1,0 +1,21 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Analog, Version=1.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Analog.Class1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String type : Public
+    Analog.Native* n : Public
+  Methods:
+    GetNative(): PrivateScope, Public, HideBySig
+    GetManaged(): PrivateScope, Public, HideBySig
+    ManagedToNative(String): PrivateScope, Public, HideBySig
+    NativeToManagedConv(): PrivateScope, Public, HideBySig
