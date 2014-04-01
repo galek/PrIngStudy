@@ -19,3 +19,12 @@
 *.exe
 *.out
 *.app
+*.~bpr
+*.~cpp
+*.~ddp
+*.~dfm
+*.~h
+*.sdf
+*.idb
+*.opensdf
+*.doc
