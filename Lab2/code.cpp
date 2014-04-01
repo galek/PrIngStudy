@@ -24,7 +24,6 @@ int main(){
 	printf("Test old list \n");
 	db.GetFromList("Nick", "Galko");
 	printf("Test new list \n");
-	system("pause");
 	db.GetFromList("Tatyna", "Galko");
 
 	system("pause");

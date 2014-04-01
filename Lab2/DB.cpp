@@ -5,7 +5,7 @@
 
 void DB::Init() {
 	list.Clear();
-	newList.Clear();
+	newList = nullptr;
 }
 
 void DB::AddToList(const char* mFirstName, const char*mLastName, int Kvar){
@@ -14,7 +14,9 @@ void DB::AddToList(const char* mFirstName, const char*mLastName, int Kvar){
 }
 void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 	printf("DeleteFromList %s %s %i \n", mFirstName, mLastName, Kvar);
-	newList.Clear();
+	if (newList)
+		newList->Clear();
+	newList = new Vega::VList<Adress>();
 	Adress*DA = GetFromList(mFirstName, mLastName);
 
 	int size = list.GetSize();
@@ -22,7 +24,7 @@ void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 	{
 		Adress *a = &list.entries[i];
 		if (a->mFirstName != DA->mFirstName)
-			newList.AddElement(a);
+			newList->AddElement(a);
 	}
 	/*list.Clear();
 	list.Resize(size-1);*/
@@ -34,7 +36,7 @@ void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
 		delete a;
 		a = NULL;
 		}*/
-	list = newList;
+	list = *newList;
 
 
 }
@@ -66,6 +68,7 @@ void DB::WriteContains()
 
 DB::~DB()
 {
-	list.Erase();
-	newList.Erase();
+	if (&list)
+		list.Erase();
+	//Forgot about delete newlist-else crash in VList destructor
 }

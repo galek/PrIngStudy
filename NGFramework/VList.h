@@ -17,9 +17,7 @@ namespace Vega {
 
 		~VList()
 		{
-			if (entries)
-				free(entries);
-			entries = NULL;
+			Erase();
 		}
 
 		T & operator[](int index) const
