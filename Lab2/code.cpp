@@ -12,14 +12,16 @@
 
 int main(){
 	DB db;
-	db.AddToList("Nick", "Galko", 75);
-	db.AddToList("Andrey", "Galko", 75);
-	db.AddToList("Tatyna", "Galko", 75);
+	db.AddToList("Nick", "Galko", "75"/*75*/);
+	db.AddToList("Andrey", "Galko", "75"/*75*/);
+	db.AddToList("Tatyna", "Galko", "75"/*75*/);
+	db.AddToList("Dasha", "Galko", "75"/*75*/);
 
 	db.GetFromList("Nick", "Galko");
 
-	printf("DeleteFromList\n");
-	db.DeleteFromList("Tatyna", "Galko", 75);
+	printf("DeleteFromList\n");/*
+	db.DeleteFromList("Tatyna", "Galko", 75);*/
+	db.DeleteFromList("Tatyna", "Galko", "75");
 	db.WriteContains();
 	printf("Test old list \n");
 	db.GetFromList("Nick", "Galko");

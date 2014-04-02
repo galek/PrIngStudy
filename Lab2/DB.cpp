@@ -8,12 +8,15 @@ void DB::Init() {
 	newList = nullptr;
 }
 
-void DB::AddToList(const char* mFirstName, const char*mLastName, int Kvar){
-	printf("AddToList %s %s %i \n", mFirstName, mLastName, Kvar);
-	list.AddElement(&Adress(mFirstName, mLastName, Kvar));
+void DB::AddToList(const char* mFirstName, const char*mLastName, const char*mAdress/*int Kvar*/){
+	//printf("AddToList %s %s %i \n", mFirstName, mLastName, Kvar);
+	printf("AddToList %s %s %s \n", mFirstName, mLastName, mAdress);
+	list.AddElement(&Adress(mFirstName, mLastName, mAdress/*Kvar*/));
 }
-void DB::DeleteFromList(const char* mFirstName, const char*mLastName, int Kvar){
-	printf("DeleteFromList %s %s %i \n", mFirstName, mLastName, Kvar);
+void DB::DeleteFromList(const char* mFirstName, const char*mLastName, const char*mAdress/*, int Kvar*/){
+	//printf("DeleteFromList %s %s %i \n", mFirstName, mLastName, Kvar);
+	printf("DeleteFromList %s %s %s \n", mFirstName, mLastName, mAdress);
+	//Некузяво так,но пойдет
 	if (newList)
 		newList->Clear();
 	newList = new Vega::VList<Adress>();

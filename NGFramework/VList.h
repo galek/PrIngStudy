@@ -110,7 +110,7 @@ namespace Vega {
 
 		T *entries; // elements of list
 
-	//protected:
+	protected:
 		// changes memory-size of list
 		bool ChangeSpace(int newSize)
 		{
