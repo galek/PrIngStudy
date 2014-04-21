@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab2", "Lab2\Lab2.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NGFramework", "NGFramework\NGFramework.vcxproj", "{5D0404EA-AA89-4BDA-86C7-8F4ECADCDA34}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab1", "Lab1\Lab1.vcxproj", "{B81398DB-28AE-4ED7-BE1C-1045E39987D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{5D0404EA-AA89-4BDA-86C7-8F4ECADCDA34}.Debug|Win32.Build.0 = Debug|Win32
 		{5D0404EA-AA89-4BDA-86C7-8F4ECADCDA34}.Release|Win32.ActiveCfg = Release|Win32
 		{5D0404EA-AA89-4BDA-86C7-8F4ECADCDA34}.Release|Win32.Build.0 = Release|Win32
+		{B81398DB-28AE-4ED7-BE1C-1045E39987D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B81398DB-28AE-4ED7-BE1C-1045E39987D0}.Debug|Win32.Build.0 = Debug|Win32
+		{B81398DB-28AE-4ED7-BE1C-1045E39987D0}.Release|Win32.ActiveCfg = Release|Win32
+		{B81398DB-28AE-4ED7-BE1C-1045E39987D0}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
